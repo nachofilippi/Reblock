@@ -21,7 +21,7 @@ export class ProductosService {
       Descripcion:"Ladrillo de concreto celular liviano"
     },
     {
-      Nombre: "LADRILLO MACIZO 15CM",
+      Nombre: "BLOQUE MACIZO 15CM",
       Altura: "Altura: 25cm",
       Longitud: "Longitud: 60cm",
       Ancho: "Ancho: 15cm",
@@ -29,7 +29,7 @@ export class ProductosService {
       Descripcion:"Ladrillo de concreto celular liviano"
     },
     {
-      Nombre: "LADRILLO MACIZO 20CM",
+      Nombre: "BLOQUE MACIZO 20CM",
       Altura: "Altura: 25cm",
       Longitud: "Longitud: 60cm",
       Ancho: "Ancho: 20cm",

@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <div id="productos" class="margenes" style="background-color:#111111;">
-  <h1 class="animated fadeIn fast texto-verde" style="margin-left: 10%">
-    PRODUCTOS
-    <h2 class="animated fadeIn texto-gris" style="font-size: 20px">Ladrillos de Cellular Light Concrete</h2>
-  </h1>
-
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="animated fadeIn fast texto-verde" style="margin-left: 10%">
+        PRODUCTOS
+        <h2 class="animated fadeIn texto-gris" style="font-size: 20px">Ladrillos de Cellular Light Concrete</h2>
+      </h1>
+    </div>
+    <div class="col-sm-6">
+      <div class="btn-group" style="margin-top:20px; margin-left:30px" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary boton-verde">Left</button>
+        <button type="button" class="btn btn-secondary boton-verde">Middle</button>
+        <button type="button" class="btn btn-secondary boton-verde">Right</button>
+      </div>
+    </div>
+  </div>
   <hr>
 
-  <div class="card-columns animated fadeIn" style="margin-left: 10%">
-    <div class="card cajonImagen" style="background-color: #00000011;max-width: 18rem;" *ngFor="let producto of productos; let i = index">
+  <div class="row animated fadeIn" style="margin-left: 10%">
+    <div class="card cajonImagen col-sm-6" style="background-color: #00000011; max-width: 18rem; margin:10px" *ngFor="let producto of productos; let i = index">
       <div *ngIf="!this.mostrar">
         <div *ngIf="i<4">
           <button (click)="verProducto(i)" type="button" class="noBackground">
