@@ -1,0 +1,27 @@
+<div >
+    <h1 class="animated fadeIn fast">{{producto.Nombre | uppercase}}
+        <small>Subtitulo del producto</small>
+    </h1>
+    <hr>
+    <div class="row animated fadeIn">
+        <div class="col-md-4">
+            <img [src]="producto.Img" class="img-fluid" alt="producto.Nombre">
+            <br>
+            <br>
+            <a [routerLink]="['/productos']" class="btn btn-outline-secondary">Regresar</a>
+        </div>
+        <div class="col-md-8 fadeIn">
+            <h3>{{producto.Nombre}}</h3>
+            <hr>
+            <p>
+                Descripcion del producto
+                <!-- <br> {{producto.Fecha | date:'y'}} -->
+
+            </p>
+            <div>
+                <p *ngIf="producto.Altura=='Altura: 20cm'"> Ladrillo</p>
+                <p *ngIf="producto.Altura=='Altura: 25cm'"> Dintel</p>
+            </div>
+        </div>
+    </div>
+</div>

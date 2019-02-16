@@ -1,0 +1,259 @@
+<div class="container margen-superior">
+  <h1 class="brand fadeIn fast titulo">
+    <span style="color: #90bd42">ASESORAMIENTO</span>
+  </h1>
+  <h2 class="animated fadeIn texto-gris" style="font-size: 20px">Calculadora de materiales</h2>
+
+  <!-- Mobile mostrar -->
+
+  <div class="alert alert-secondary animated bounceInLeft inputApertura" style="margin-top: 60px; padding: 25px; text-align: center"
+    role="alert" id="mobile">
+    La calculadora de materiales no se encuentra disponible para celulares.<br>
+    <b>Disculpe las molestias!</b>
+  </div>
+
+
+  <!-- Calculadora Escritorio -->
+
+  <div class="wrapper animated bounceInLeft fondo mobileNoMostrar" id="escritorio">
+    <!-- <div class="">
+      <tr>
+        <td class="titulo-mayor" colspan="4" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 1&quot;]">PARED</td>
+        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 1&quot;]">ABERTURA 1</td>
+        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 2&quot;]">ABERTURA 2</td>
+        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 3&quot;]">ABERTURA 3</td>
+        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 4&quot;]">ABERTURA 4</td>
+        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 5&quot;]">ABERTURA 5</td>
+        <td class="titulo-mayor" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;SUP.&quot;]">SUPERFICIE</td>
+      </tr>
+      <tr>
+        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Tipo de muro&quot;]">Tipo de pared</td>
+        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Espesor&quot;]">Espesor</td>
+        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Largo&quot;]">Largo</td>
+        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;&quot;]"></td>
+      </tr>
+      <tr class="unidades">
+
+        <td class="titulo"></td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;cm.&quot;]">cm.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m2.&quot;]">m²</td>
+        <td class="titulo" data-sheets-value="[null,2,&quot;m2.&quot;]">m²</td>
+
+      </tr>
+    </div> -->
+
+    <!-- introduccion de datos -->
+    <div class="">
+      <div class="card-header textoTitulo">
+        <p> TIPO DE PARED </p>
+        <p> ESPESOR </p>
+        <div style="margin-left: 30px">
+          <p> ABERTURA 1</p>
+          <p> ABERTURA 2</p>
+          <p> ABERTURA 3</p>
+          <p> ABERTURA 4</p>
+          <p> ABERTURA 5</p>
+          <p style="text-align: right"> SUP.</p>
+        </div>
+
+      </div>
+
+      <div class="input-group input-group-sm">
+        <!-- botones -->
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option value="P">Portante</option>
+            <option value="NP">No Portante</option>
+          </select>
+        </div>
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option id="espesor7.5_P1" value="7.5">7.5 cm</option>
+            <option id="espesor10_P1" value="10">10 cm</option>
+            <option id="espesor15_P1" value="15">15 cm</option>
+            <option id="espesor20_P1" value="20">20 cm</option>
+          </select>
+        </div>
+        <!-- inputs -->
+        <input class="form-control inputApertura" id="largo_P1" value="" type="number" title="Largo de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_P1" type="number" title="Ancho de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_A1_P1" type="number" title="Ancho de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="alto_A1_P1" type="number" title="Alto de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="ancho_A2_P1" type="number" title="Ancho de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="alto_A2_P1" type="number" title="Alto de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="ancho_A3_P1" type="number" title="Ancho de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="alto_A3_P1" type="number" title="Alto de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="ancho_A4_P1" type="number" title="Ancho de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="alto_A4_P1" type="number" title="Alto de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="ancho_A5_P1" type="number" title="Ancho de la Abertura 5 en metros">
+        <input class="form-control inputApertura" id="alto_A5_P1" type="number" title="Alto de la Abertura 5 en metros">
+        <input class="form-control inputSuperficie" type="text" id="areatotalp1" name="result" value="">
+      </div>
+    </div>
+    <div>
+      <div class="input-group input-group-sm">
+        <!-- botones -->
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option value="P">Portante</option>
+            <option value="NP">No Portante</option>
+          </select>
+        </div>
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option id="espesor7.5_P2" value="7.5">7.5 cm</option>
+            <option id="espesor10_P2" value="10">10 cm</option>
+            <option id="espesor15_P2" value="15">15 cm</option>
+            <option id="espesor20_P2" value="20">20 cm</option>
+          </select>
+        </div>
+        <!-- inputs -->
+        <input class="form-control inputApertura" id="largo_P2" value="" type="number" title="Largo de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_P2" type="number" title="Ancho de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_A1_P2" type="number" title="Ancho de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="alto_A1_P2" type="number" title="Alto de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="ancho_A2_P2" type="number" title="Ancho de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="alto_A2_P2" type="number" title="Alto de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="ancho_A3_P2" type="number" title="Ancho de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="alto_A3_P2" type="number" title="Alto de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="ancho_A4_P2" type="number" title="Ancho de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="alto_A4_P2" type="number" title="Alto de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="ancho_A5_P2" type="number" title="Ancho de la Abertura 5 en metros">
+        <input class="form-control inputApertura" id="alto_A5_P2" type="number" title="Alto de la Abertura 5 en metros">
+        <input class="form-control inputSuperficie" type="text" id="areatotalp2" name="result" value="">
+      </div>
+    </div>
+
+    <div>
+      <div class="input-group input-group-sm">
+        <!-- botones -->
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option value="P">Portante</option>
+            <option value="NP">No Portante</option>
+          </select>
+        </div>
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option id="espesor7.5_P3" value="7.5">7.5 cm</option>
+            <option id="espesor10_P3" value="10">10 cm</option>
+            <option id="espesor15_P3" value="15">15 cm</option>
+            <option id="espesor20_P3" value="20">20 cm</option>
+          </select>
+        </div>
+        <!-- inputs -->
+        <input class="form-control inputApertura" data-toggle="tooltip" data-placement="top" id="largo_P3" value=""
+          type="number" title="Largo de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_P3" type="number" title="Ancho de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_A1_P3" type="number" title="Ancho de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="alto_A1_P3" type="number" title="Alto de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="ancho_A2_P3" type="number" title="Ancho de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="alto_A2_P3" type="number" title="Alto de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="ancho_A3_P3" type="number" title="Ancho de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="alto_A3_P3" type="number" title="Alto de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="ancho_A4_P3" type="number" title="Ancho de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="alto_A4_P3" type="number" title="Alto de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="ancho_A5_P3" type="number" title="Ancho de la Abertura 5 en metros">
+        <input class="form-control inputApertura" id="alto_A5_P3" type="number" title="Alto de la Abertura 5 en metros">
+        <input class="form-control inputSuperficie" type="text" id="areatotalp3" name="result" value="">
+      </div>
+    </div>
+
+    <div>
+      <div class="input-group input-group-sm">
+        <!-- botones -->
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option value="P">Portante</option>
+            <option value="NP">No Portante</option>
+          </select>
+        </div>
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option id="espesor7.5_P4" value="7.5">7.5 cm</option>
+            <option id="espesor10_P4" value="10">10 cm</option>
+            <option id="espesor15_P4" value="15">15 cm</option>
+            <option id="espesor20_P4" value="20">20 cm</option>
+          </select>
+        </div>
+        <!-- inputs -->
+        <input class="form-control inputApertura" data-toggle="tooltip" data-placement="top" id="largo_P4" value=""
+          type="number" title="Largo de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_P4" type="number" title="Ancho de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_A1_P4" type="number" title="Ancho de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="alto_A1_P4" type="number" title="Alto de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="ancho_A2_P4" type="number" title="Ancho de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="alto_A2_P4" type="number" title="Alto de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="ancho_A3_P4" type="number" title="Ancho de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="alto_A3_P4" type="number" title="Alto de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="ancho_A4_P4" type="number" title="Ancho de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="alto_A4_P4" type="number" title="Alto de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="ancho_A5_P4" type="number" title="Ancho de la Abertura 5 en metros">
+        <input class="form-control inputApertura" id="alto_A5_P4" type="number" title="Alto de la Abertura 5 en metros">
+        <input class="form-control inputSuperficie" type="text" id="areatotalp4" name="result" value="">
+      </div>
+    </div>
+
+    <div>
+      <div class="input-group input-group-sm">
+        <!-- botones -->
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option value="P">Portante</option>
+            <option value="NP">No Portante</option>
+          </select>
+        </div>
+        <div class="input-group-prepend">
+          <select class="btn btn-secondary btn-sm dropdown-toggle">
+            <option id="espesor7.5_P5" value="7.5">7.5 cm</option>
+            <option id="espesor10_P5" value="10">10 cm</option>
+            <option id="espesor15_P5" value="15">15 cm</option>
+            <option id="espesor20_P5" value="20">20 cm</option>
+          </select>
+        </div>
+        <!-- inputs -->
+        <input class="form-control inputApertura" id="largo_P5" value="" type="number" title="Largo de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_P5" type="number" title="Ancho de la Pared en metros">
+        <input class="form-control inputApertura" id="ancho_A1_P5" type="number" title="Ancho de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="alto_A1_P5" type="number" title="Alto de la Abertura 1 en metros">
+        <input class="form-control inputApertura" id="ancho_A2_P5" type="number" title="Ancho de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="alto_A2_P5" type="number" title="Alto de la Abertura 2 en metros">
+        <input class="form-control inputApertura" id="ancho_A3_P5" type="number" title="Ancho de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="alto_A3_P5" type="number" title="Alto de la Abertura 3 en metros">
+        <input class="form-control inputApertura" id="ancho_A4_P5" type="number" title="Ancho de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="alto_A4_P5" type="number" title="Alto de la Abertura 4 en metros">
+        <input class="form-control inputApertura" id="ancho_A5_P5" type="number" title="Ancho de la Abertura 5 en metros">
+        <input class="form-control inputApertura" id="alto_A5_P5" type="number" title="Alto de la Abertura 5 en metros">
+        <input class="form-control inputSuperficie" type="text" id="areatotalp5" name="result" value="" />
+      </div>
+    </div>
+    <div class="row " style="text-align:center" >
+      <a onclick="calcularAreas()" class="btn btn-lg" style="background:#90bd42;margin-left: 40%" id="click-me">CALCULAR</a>
+      <!-- <input type="button" class="btn_loadmore btn btn-lg btn-orange" value="CALCULAR" onclick="calcularAreas()"/> -->
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+footer {
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+/* iconos */
+
+.izquierda {
+    position: absolute;
+    left: 0;
+    margin: 0 0 0 30px;
+}
+
+.noStyle {
+    color: #00000000;
+}
+
+.iconosStyle {
+    max-width: 30px;
+    padding: 0 4px;
+}
+
+.iconos {
+    color: #bbbbbb
+}
+
+.iconos:hover {
+    color: #90bd42
+}
+
+/* texto */
+
+.registrado {
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+    font-size: auto;
+}
+
+.text-center {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}

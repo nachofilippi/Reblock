@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark navBar" style="background-color: #000000">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/reblock isologo.png" class="d-inline-block align-top formato-general" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <nav class="nav nav-pills flex-column flex-sm-row">
+        <!-- active -->
+        <li class="nav-item seleccion" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="flex-sm-fill text-sm-center nav-link" [routerLink]="['home']" fragment="home">INICIO</a>
+        </li>
+        <li class="nav-item seleccion" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="flex-sm-fill text-sm-center nav-link" [routerLink]="['nosotros']" fragment="nosotros" >NOSOTROS</a>
+        </li>
+        <li class="nav-item seleccion" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="flex-sm-fill text-sm-center nav-link" [routerLink]="['productos']" fragment="productos">PRODUCTOS</a>
+        </li>
+        <li class="nav-item seleccion" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="flex-sm-fill text-sm-center nav-link" [routerLink]="['obras']" fragment="obras">OBRAS</a>
+        </li>
+        <li class="nav-item seleccion" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="flex-sm-fill text-sm-center nav-link" [routerLink]="['contacto']" fragment="contacto">CONTACTO</a>
+        </li>
+        <li class="nav-item seleccion" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="flex-sm-fill text-sm-center nav-link" [routerLink]="['asesoramiento']" fragment="first">ASESORAMIENTO</a>
+        </li>
+        <!-- <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Disabled</a> -->
+        <!-- <li class="nav-item dropdown" routerLinkActive="active">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Externo</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Facebook</a>
+            <a class="dropdown-item" href="#">Twitter</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">YouTube</a>
+          </div>
+        </li> -->
+      </nav>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" onsubmit="return false">
+      <input class="form-control adaptar" type="text" placeholder="Buscar Producto" (keyup.enter)="buscarProducto(buscarTexto.value)"
+        #buscarTexto>
+      <button (click)="buscarProducto(buscarTexto.value)" data-toggle="collapse" data-target=".navbar-collapse.show" class="btn btn-outline-dark my-2 my-sm-0" style="margin-left:10px" type="button"><i class="fas fa-search"></i></button>
+    </form>
+
+  </div>
+  
+</nav>

@@ -1,0 +1,20 @@
+{
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.side": "right",
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 120,
+    "editor.minimap.renderCharacters": true,
+    "gitHistory.hideCommitViewExplorer": true,
+    "gitHistory.showEditorTitleMenuBarIcons": true,
+    "[git-commit]": {
+        "editor.rulers": [
+            72
+        ]
+    },
+    "gitblame.commitUrl": "guess",
+    "gitMerger.customCommitMessage": true,
+    "gitblame.statusBarPositionPriority": 0,
+    "git.autoRepositoryDetection": true,
+    "git.decorations.enabled": true,
+    "git.enabled": true
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<h1 class="animated fadeIn fast texto-verde" style="margin-top: 130px">
+  BUSCADOR:
+  <small class="texto-gris">{{termino}}</small>
+</h1>
+<hr>
+
+<div class="row animated fadeIn" *ngIf="productos.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con la busqueda: {{termino}}
+    </div>
+  </div>
+
+</div>
+
+<div class="card-columns animated fadeIn">
+  <div class="card margenes " style="max-width: 18rem; background-color: #333333;" *ngFor="let producto of productos; let i = index">
+    <img class="card-img-top" [src]="producto.Img" [alt]="producto.Nombre">
+    <div class="card-body-block texto-gris">
+      <h5 class="card-title text-center">{{ producto.Nombre }}</h5>
+      <p class="card-text text-center">
+        {{producto.Altura}} {{producto.Longitud}} {{producto.Ancho}}
+        <br> {{producto.Fecha}}
+      </p>
+      <p class="texto-verde card-text">
+        <small>Reblock® </small>
+      </p>
+    </div>
+    <button (click)="verProducto(i)" type="button" class="btn btn-outline-secondary btn-block">
+      Ver mas...
+    </button>
+    <!-- <a [routerLink]="['/producto',i]" class="btn btn-outline-secondary btn-block">Ver mas...</a> -->
+  </div>
+
+</div>

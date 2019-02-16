@@ -1,0 +1,66 @@
+
+  .margenSuperior{
+    margin-top: 100px;
+    position: fixed;
+  }
+  
+  .imagen-centrada {
+    max-width: 75%;
+    /* margin: auto auto; */
+  }
+  
+  .fondoCard {
+    background-color: #11111111;
+  }
+  
+  .texto-medio {
+    font-size: 20px;
+  }
+  
+  .texto-peque {
+    font-size: 18px;
+  }
+  
+  .texto-grande {
+    font-size: 40px;
+  }
+  
+  .texto-verde {
+    color: #90bd42;
+  }
+  
+  .fondoGris {
+    background-color: #77777799;
+  }
+  
+  .texto-gris {
+    color: #bbbbbb;
+  }
+  
+  .boton-verde {
+    border-width: 0px 0px 2px 0px;
+    border-color: #90bd42;
+    background-color: rgba(0, 0, 0, 0);
+    color: #bbbbbb;
+  }
+  
+  .boton-verde:hover {
+    background-color: #90bd42;
+    color: black;
+  }
+  .boton-verde:focus {
+    background-color: #90bd42;
+    border-color: #90bd42;
+    color: black;
+  }
+  .boton-verde:active {
+    background-color: #90bd42;
+    border-color: #90bd42;
+    color: black;
+  }
+  
+  .centrar{
+    display: flex;
+    justify-content: center;
+  }
+  

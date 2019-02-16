@@ -1,0 +1,89 @@
+#productos {
+  margin: 100px 0 20px 0;
+}
+
+
+/* texto gris general */
+
+.texto-gris {
+  color: #bbbbbb;
+}
+
+.texto-verde {
+  color: #90BD42;
+}
+
+.texto-chico {
+  font-size: 20px;
+}
+
+.margenes {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.boton-verde {
+  border-width: 0px 0px 2px 0px;
+  border-color: #90bd42;
+  background-color: rgba(0, 0, 0, 0);
+  color: #bbbbbb;
+}
+
+.boton-verde:hover {
+  background-color: #90bd42;
+  color: black;
+}
+.boton-verde:focus {
+  background-color: #90bd42;
+  border-color: #90bd42;
+  color: black;
+}
+.boton-verde:active {
+  background-color: #90bd42;
+  border-color: #90bd42;
+  color: black;
+}
+
+.centrar{
+  display: flex;
+  justify-content: center;
+}
+
+.noBackground {
+  background-color: #77777700;
+  border: #77777700;
+}
+
+.cajonImagen {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cajonImagen:hover .imagenBoton {
+  transition: all 1s ease-in-out 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.imagenBoton {
+  background: rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  position: absolute;
+  padding-top: 40px;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  right: 0;
+  top: 0;
+}
+
+.imagenBoton hr {
+  width: 70%
+}
+
+.titulo {
+  background-color: #00000000;
+  border: 0 0 0 0;
+}

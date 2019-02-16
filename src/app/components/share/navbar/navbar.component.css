@@ -1,0 +1,68 @@
+.seleccion:hover {
+    border-bottom: 1px solid #90bd42;
+    color: white;
+}
+
+.navBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    z-index: 1
+}
+
+.formato-general {
+    height: 90px;
+    width: 300px;
+}
+
+input {
+    background-color: #000000;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    box-shadow: 0ch;
+}
+
+input:hover,
+:focus {
+    background-color: #000000;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    box-shadow: 0ch;
+}
+@media all and (max-width: 375px) and (max-height:600px) {
+    .formato-general {
+        height: 65px;
+        width: 210px;
+    }
+    .adaptar {
+        width: 80%
+    }
+}
+
+@media all and (min-width: 375px) and (max-width: 800px) and (min-height:600px) and (max-height:900px) {
+    .formato-general {
+        height: 75px;
+        width: 260px;
+    }
+    .adaptar {
+        width: 80%
+    }
+}
+
+@media all and (min-width: 800px) and (max-width: 1200px) and (min-height:900px) and (max-height:1500px) {
+    .formato-general {
+        height: 100px;
+        width: 300px;
+    }
+    .adaptar {
+        width: 100%
+    }
+}
