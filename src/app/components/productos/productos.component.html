@@ -8,19 +8,21 @@
       </h1>
     </div>
     <div class="col-sm-6">
-      <div class="btn-group" style="margin-top:20px; margin-left:30px" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary boton-verde">Left</button>
-        <button type="button" class="btn btn-secondary boton-verde">Middle</button>
-        <button type="button" class="btn btn-secondary boton-verde">Right</button>
+      <div class="btn-group" style="margin-top:20px; margin-right:10%;float: right;" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarTodos()">Todos</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarBloque()">Bloques</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarDintel()">Dinteles</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarBloqueU()">Bloques 'U'</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarHerramienta()">Herramientas</button>
       </div>
     </div>
   </div>
   <hr>
 
   <div class="row animated fadeIn" style="margin-left: 10%">
-    <div class="card cajonImagen col-sm-6" style="background-color: #00000011; max-width: 18rem; margin:10px" *ngFor="let producto of productos; let i = index">
-      <div *ngIf="!this.mostrar">
-        <div *ngIf="i<4">
+    <div class="cajonImagen" style="background-color: #00000011; max-width: 18rem; margin:10px" *ngFor="let producto of productos; let i = index">
+      <div *ngIf="bloqueActivo">
+        <div *ngIf="producto.Tipo == 'Bloque'">
           <button (click)="verProducto(i)" type="button" class="noBackground">
             <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
             <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
@@ -28,31 +30,49 @@
           </button>
         </div>
       </div>
-      <div *ngIf="this.mostrar">
+      <div *ngIf="bloqueUActivo">
+        <div *ngIf="producto.Tipo == 'BloqueU'">
+          <button (click)="verProducto(i)" type="button" class="noBackground">
+            <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
+            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="imagenBoton"></div>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="dintelActivo">
+        <div *ngIf="producto.Tipo == 'Dintel'">
+          <button (click)="verProducto(i)" type="button" class="noBackground">
+            <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
+            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="imagenBoton"></div>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="herramientaActivo">
+        <div *ngIf="producto.Tipo == 'Herramienta'" >
+          <button (click)="verProducto(i)" type="button" class="noBackground">
+            <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
+            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="imagenBoton"></div>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="todosActivo">
         <button (click)="verProducto(i)" type="button" class="noBackground">
           <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
           <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
           <div class="imagenBoton"></div>
         </button>
       </div>
-
-
       <!-- <div class="texto-gris cajaDescriptiva">
-        
-        <p class="card-text text-center" style="color: #bbbbbb;">
-          {{producto.Altura}} {{producto.Longitud}} {{producto.Ancho}}
-          <br> {{producto.Fecha}}
-        </p>
-      </div> -->
+
+            <p class="card-text text-center" style="color: #bbbbbb;">
+              {{producto.Altura}} {{producto.Longitud}} {{producto.Ancho}}
+              <br> {{producto.Fecha}}
+            </p>
+        </div> -->
       <!-- <a [routerLink]="['/producto',i]" class="btn btn-outline-secondary btn-block">Ver mas...</a> -->
     </div>
   </div>
-  <div class="centrar" *ngIf="!this.mostrar">
-    <button type="button" class="btn btn-lg btn-outline text-center boton-verde" style="text-align:center" (click)="cambio()">VER
-      MAS</button>
-  </div>
-  <div class="centrar" *ngIf="this.mostrar">
-    <button type="button" class="btn btn-lg btn-outline text-center boton-verde" style="text-align:center" (click)="cambio()">VER
-      MENOS</button>
-  </div>
+
 </div>
