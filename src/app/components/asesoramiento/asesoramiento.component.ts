@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-asesoramiento',
   templateUrl: './asesoramiento.component.html',
   styleUrls: ['./asesoramiento.component.css']
 })
 export class AsesoramientoComponent {
+
 
   largo_P1: HTMLInputElement;
   ancho_P1: HTMLInputElement;
@@ -74,11 +76,11 @@ export class AsesoramientoComponent {
   alto_A5_P5: HTMLInputElement;
 
   // areas muros
-  AreaMuroP1: number ;
-  AreaMuroP2: number ;
-  AreaMuroP3: number ;
-  AreaMuroP4: number ;
-  AreaMuroP5: number ;
+  AreaMuroP1: number;
+  AreaMuroP2: number;
+  AreaMuroP3: number;
+  AreaMuroP4: number;
+  AreaMuroP5: number;
 
   // aberturas
   // 1
@@ -118,72 +120,73 @@ export class AsesoramientoComponent {
   AreaTotalP3: number;
   AreaTotalP4: number;
   AreaTotalP5: number;
+  countryForm: any;
 
   constructor() {
     // muro
-    this.largo_P1 = <HTMLInputElement>document.getElementById("largo_P1");
-    this.ancho_P1 = <HTMLInputElement>document.getElementById("ancho_P1");
-    this.largo_P2 = <HTMLInputElement>document.getElementById("largo_P2");
-    this.ancho_P2 = <HTMLInputElement>document.getElementById("ancho_P2");
-    this.largo_P3 = <HTMLInputElement>document.getElementById("largo_P3");
-    this.ancho_P3 = <HTMLInputElement>document.getElementById("ancho_P3");
-    this.largo_P4 = <HTMLInputElement>document.getElementById("largo_P4");
-    this.ancho_P5 = <HTMLInputElement>document.getElementById("ancho_P5");
+    this.largo_P1 = <HTMLInputElement>document.getElementById('largo_P1');
+    this.ancho_P1 = <HTMLInputElement>document.getElementById('ancho_P1');
+    this.largo_P2 = <HTMLInputElement>document.getElementById('largo_P2');
+    this.ancho_P2 = <HTMLInputElement>document.getElementById('ancho_P2');
+    this.largo_P3 = <HTMLInputElement>document.getElementById('largo_P3');
+    this.ancho_P3 = <HTMLInputElement>document.getElementById('ancho_P3');
+    this.largo_P4 = <HTMLInputElement>document.getElementById('largo_P4');
+    this.ancho_P5 = <HTMLInputElement>document.getElementById('ancho_P5');
     // abertura 1
-    this.ancho_A1_P1 = <HTMLInputElement>document.getElementById("ancho_A1_P1");
-    this.alto_A1_P1 = <HTMLInputElement>document.getElementById("alto_A1_P1");
-    this.ancho_A2_P1 = <HTMLInputElement>document.getElementById("ancho_A2_P1");
-    this.alto_A2_P1 = <HTMLInputElement>document.getElementById("alto_A2_P1");
-    this.ancho_A3_P1 = <HTMLInputElement>document.getElementById("ancho_A3_P1");
-    this.alto_A3_P1 = <HTMLInputElement>document.getElementById("alto_A3_P1");
-    this.ancho_A4_P1 = <HTMLInputElement>document.getElementById("ancho_A4_P1");
-    this.alto_A4_P1 = <HTMLInputElement>document.getElementById("alto_A4_P1");
-    this.ancho_A5_P1 = <HTMLInputElement>document.getElementById("ancho_A5_P1");
-    this.alto_A5_P1 = <HTMLInputElement>document.getElementById("alto_A5_P1");
+    this.ancho_A1_P1 = <HTMLInputElement>document.getElementById('ancho_A1_P1');
+    this.alto_A1_P1 = <HTMLInputElement>document.getElementById('alto_A1_P1');
+    this.ancho_A2_P1 = <HTMLInputElement>document.getElementById('ancho_A2_P1');
+    this.alto_A2_P1 = <HTMLInputElement>document.getElementById('alto_A2_P1');
+    this.ancho_A3_P1 = <HTMLInputElement>document.getElementById('ancho_A3_P1');
+    this.alto_A3_P1 = <HTMLInputElement>document.getElementById('alto_A3_P1');
+    this.ancho_A4_P1 = <HTMLInputElement>document.getElementById('ancho_A4_P1');
+    this.alto_A4_P1 = <HTMLInputElement>document.getElementById('alto_A4_P1');
+    this.ancho_A5_P1 = <HTMLInputElement>document.getElementById('ancho_A5_P1');
+    this.alto_A5_P1 = <HTMLInputElement>document.getElementById('alto_A5_P1');
     // abertura 2
-    this.ancho_A1_P2 = <HTMLInputElement>document.getElementById("ancho_A1_P2");
-    this.alto_A1_P2 = <HTMLInputElement>document.getElementById("alto_A1_P2");
-    this.ancho_A2_P2 = <HTMLInputElement>document.getElementById("ancho_A2_P2");
-    this.alto_A2_P2 = <HTMLInputElement>document.getElementById("alto_A2_P2");
-    this.ancho_A3_P2 = <HTMLInputElement>document.getElementById("ancho_A3_P2");
-    this.alto_A3_P2 = <HTMLInputElement>document.getElementById("alto_A3_P2");
-    this.ancho_A4_P2 = <HTMLInputElement>document.getElementById("ancho_A4_P2");
-    this.alto_A4_P2 = <HTMLInputElement>document.getElementById("alto_A4_P2");
-    this.ancho_A5_P2 = <HTMLInputElement>document.getElementById("ancho_A5_P2");
-    this.alto_A5_P2 = <HTMLInputElement>document.getElementById("alto_A5_P2");
+    this.ancho_A1_P2 = <HTMLInputElement>document.getElementById('ancho_A1_P2');
+    this.alto_A1_P2 = <HTMLInputElement>document.getElementById('alto_A1_P2');
+    this.ancho_A2_P2 = <HTMLInputElement>document.getElementById('ancho_A2_P2');
+    this.alto_A2_P2 = <HTMLInputElement>document.getElementById('alto_A2_P2');
+    this.ancho_A3_P2 = <HTMLInputElement>document.getElementById('ancho_A3_P2');
+    this.alto_A3_P2 = <HTMLInputElement>document.getElementById('alto_A3_P2');
+    this.ancho_A4_P2 = <HTMLInputElement>document.getElementById('ancho_A4_P2');
+    this.alto_A4_P2 = <HTMLInputElement>document.getElementById('alto_A4_P2');
+    this.ancho_A5_P2 = <HTMLInputElement>document.getElementById('ancho_A5_P2');
+    this.alto_A5_P2 = <HTMLInputElement>document.getElementById('alto_A5_P2');
     // abertura 3
-    this.ancho_A1_P3 = <HTMLInputElement>document.getElementById("ancho_A1_P3");
-    this.alto_A1_P3 = <HTMLInputElement>document.getElementById("alto_A1_P3");
-    this.ancho_A2_P3 = <HTMLInputElement>document.getElementById("ancho_A2_P3");
-    this.alto_A2_P3 = <HTMLInputElement>document.getElementById("alto_A2_P3");
-    this.ancho_A3_P3 = <HTMLInputElement>document.getElementById("ancho_A3_P3");
-    this.alto_A3_P3 = <HTMLInputElement>document.getElementById("alto_A3_P3");
-    this.ancho_A4_P3 = <HTMLInputElement>document.getElementById("ancho_A4_P3");
-    this.alto_A4_P3 = <HTMLInputElement>document.getElementById("alto_A4_P3");
-    this.ancho_A5_P3 = <HTMLInputElement>document.getElementById("ancho_A5_P3");
-    this.alto_A5_P3 = <HTMLInputElement>document.getElementById("alto_A5_P3");
+    this.ancho_A1_P3 = <HTMLInputElement>document.getElementById('ancho_A1_P3');
+    this.alto_A1_P3 = <HTMLInputElement>document.getElementById('alto_A1_P3');
+    this.ancho_A2_P3 = <HTMLInputElement>document.getElementById('ancho_A2_P3');
+    this.alto_A2_P3 = <HTMLInputElement>document.getElementById('alto_A2_P3');
+    this.ancho_A3_P3 = <HTMLInputElement>document.getElementById('ancho_A3_P3');
+    this.alto_A3_P3 = <HTMLInputElement>document.getElementById('alto_A3_P3');
+    this.ancho_A4_P3 = <HTMLInputElement>document.getElementById('ancho_A4_P3');
+    this.alto_A4_P3 = <HTMLInputElement>document.getElementById('alto_A4_P3');
+    this.ancho_A5_P3 = <HTMLInputElement>document.getElementById('ancho_A5_P3');
+    this.alto_A5_P3 = <HTMLInputElement>document.getElementById('alto_A5_P3');
     // abertura 4
-    this.ancho_A1_P4 = <HTMLInputElement>document.getElementById("ancho_A1_P4");
-    this.alto_A1_P4 = <HTMLInputElement>document.getElementById("alto_A1_P4");
-    this.ancho_A2_P4 = <HTMLInputElement>document.getElementById("ancho_A2_P4");
-    this.alto_A2_P4 = <HTMLInputElement>document.getElementById("alto_A2_P4");
-    this.ancho_A3_P4 = <HTMLInputElement>document.getElementById("ancho_A3_P4");
-    this.alto_A3_P4 = <HTMLInputElement>document.getElementById("alto_A3_P4");
-    this.ancho_A4_P4 = <HTMLInputElement>document.getElementById("ancho_A4_P4");
-    this.alto_A4_P4 = <HTMLInputElement>document.getElementById("alto_A4_P4");
-    this.ancho_A5_P4 = <HTMLInputElement>document.getElementById("ancho_A5_P4");
-    this.alto_A5_P4 = <HTMLInputElement>document.getElementById("alto_A5_P4");
+    this.ancho_A1_P4 = <HTMLInputElement>document.getElementById('ancho_A1_P4');
+    this.alto_A1_P4 = <HTMLInputElement>document.getElementById('alto_A1_P4');
+    this.ancho_A2_P4 = <HTMLInputElement>document.getElementById('ancho_A2_P4');
+    this.alto_A2_P4 = <HTMLInputElement>document.getElementById('alto_A2_P4');
+    this.ancho_A3_P4 = <HTMLInputElement>document.getElementById('ancho_A3_P4');
+    this.alto_A3_P4 = <HTMLInputElement>document.getElementById('alto_A3_P4');
+    this.ancho_A4_P4 = <HTMLInputElement>document.getElementById('ancho_A4_P4');
+    this.alto_A4_P4 = <HTMLInputElement>document.getElementById('alto_A4_P4');
+    this.ancho_A5_P4 = <HTMLInputElement>document.getElementById('ancho_A5_P4');
+    this.alto_A5_P4 = <HTMLInputElement>document.getElementById('alto_A5_P4');
     // abertura 5
-    this.ancho_A1_P5 = <HTMLInputElement>document.getElementById("ancho_A1_P5");
-    this.alto_A1_P5 = <HTMLInputElement>document.getElementById("alto_A1_P5");
-    this.ancho_A2_P5 = <HTMLInputElement>document.getElementById("ancho_A2_P5");
-    this.alto_A2_P5 = <HTMLInputElement>document.getElementById("alto_A2_P5");
-    this.ancho_A3_P5 = <HTMLInputElement>document.getElementById("ancho_A3_P5");
-    this.alto_A3_P5 = <HTMLInputElement>document.getElementById("alto_A3_P5");
-    this.ancho_A4_P5 = <HTMLInputElement>document.getElementById("ancho_A4_P5");
-    this.alto_A4_P5 = <HTMLInputElement>document.getElementById("alto_A4_P5");
-    this.ancho_A5_P5 = <HTMLInputElement>document.getElementById("ancho_A5_P5");
-    this.alto_A5_P5 = <HTMLInputElement>document.getElementById("alto_A5_P5");
+    this.ancho_A1_P5 = <HTMLInputElement>document.getElementById('ancho_A1_P5');
+    this.alto_A1_P5 = <HTMLInputElement>document.getElementById('alto_A1_P5');
+    this.ancho_A2_P5 = <HTMLInputElement>document.getElementById('ancho_A2_P5');
+    this.alto_A2_P5 = <HTMLInputElement>document.getElementById('alto_A2_P5');
+    this.ancho_A3_P5 = <HTMLInputElement>document.getElementById('ancho_A3_P5');
+    this.alto_A3_P5 = <HTMLInputElement>document.getElementById('alto_A3_P5');
+    this.ancho_A4_P5 = <HTMLInputElement>document.getElementById('ancho_A4_P5');
+    this.alto_A4_P5 = <HTMLInputElement>document.getElementById('alto_A4_P5');
+    this.ancho_A5_P5 = <HTMLInputElement>document.getElementById('ancho_A5_P5');
+    this.alto_A5_P5 = <HTMLInputElement>document.getElementById('alto_A5_P5');
   }
 
   public calcularTotalArea() {
@@ -231,11 +234,5 @@ export class AsesoramientoComponent {
 
   }
 
-  // private pasarFloat(){
-  //   return parseFloat(this.)
-  // }
-
-
-
-
 }
+

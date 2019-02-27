@@ -2,15 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-//Routes
+// Routes
 import { APP_ROUTING } from './app.routes';
 
 
-//Servicios
-import { ProductosService } from "./servicios/productos.service";
+// Servicios
+import { ProductosService } from './servicios/productos.service';
 
 
-//Components
+// Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
