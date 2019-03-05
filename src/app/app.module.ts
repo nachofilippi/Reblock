@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 
 // Routes
@@ -27,6 +29,7 @@ import { CovidoComponent } from './components/covido/covido.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +48,7 @@ import { CovidoComponent } from './components/covido/covido.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     APP_ROUTING
 
   ],

@@ -11,7 +11,7 @@ html {
 body{
   padding-bottom: 50px;
   background-image: url("assets/img/fondoLadrillos.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-attachment: fixed;
   font-family: 'Poiret One', cursive;
   /* margin: 0; */
