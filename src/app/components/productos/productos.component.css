@@ -13,6 +13,9 @@
 .texto-verde {
   color: #90BD42;
 }
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(117, 139, 121, 0.527);
+}
 
 .texto-chico {
   font-size: 20px;
