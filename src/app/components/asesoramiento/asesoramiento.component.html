@@ -5,16 +5,18 @@
   <h2 class="animated fadeIn texto-gris" style="font-size: 20px;margin-bottom: 30px">Calculadora de materiales</h2>
 
   <!-- Mobile mostrar -->
-
-  <div class="alert alert-secondary animated bounceInLeft inputApertura" style="margin-top: 60px; padding: 25px; text-align: center"
-    role="alert" id="mobile">
-    La calculadora de materiales no se encuentra disponible para celulares.<br>
-    <b>Disculpe las molestias!</b>
+  <div id="mobile">
+    <div class="alert alert-secondary animated bounceInLeft inputApertura" role="alert">
+      La calculadora de materiales no se encuentra disponible para celulares.<br>
+      <b>Disculpe las molestias!</b>
+    </div>
   </div>
-
   <!-- Calculadora Escritorio -->
   <div id="escritorio">
-    <table class="table table-dark table-hover" style="text-align: center">
+    <!------------------------------------------------------
+       TABLA DE INPUTS
+    -------------------------------------------------- -->
+    <table class="table table-dark table-hover wrapper" style="text-align: center">
       <thead>
         <tr>
           <th scope="col" colspan="4">PARED</th>
@@ -47,7 +49,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- primer pared -->
+        <!-- primera pared -->
         <tr>
           <th scope="row">
             <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionMuro1">
@@ -465,7 +467,10 @@
 
       </tbody>
     </table>
-    <table class="table table-dark table-hover" style="text-align: center">
+    <!------------------------------------------------------
+       TABLA DE RESULTADOS
+    -------------------------------------------------- -->
+    <table class="table table-dark table-hover wrapper" style="text-align: center">
       <tbody>
         <tr>
           <td class="tituloTabla" colspan="2" rowspan="5">

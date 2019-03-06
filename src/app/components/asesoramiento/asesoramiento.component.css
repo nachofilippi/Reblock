@@ -1,6 +1,6 @@
 .margen-superior {
-  margin-top: 100px;
- 
+  margin-top: 150px;
+
 }
 
 
@@ -10,7 +10,9 @@
   margin-right: auto;
   padding: 2em;
   /* max-height: 100% */
-
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(117, 139, 121, 0.527);
+}
 
 .textoTitulo {
   color: #cccccc;
@@ -30,22 +32,25 @@
   background-color: #90bd42;
   color: black;
 }
+
 .boton-verde:focus {
   background-color: #90bd42;
   border-color: #90bd42;
   color: black;
 }
+
 .boton-verde:active {
   background-color: #90bd42;
   border-color: #90bd42;
   color: black;
 }
-.centrar{
+
+.centrar {
   display: flex;
   justify-content: center;
 }
 
-input{
+input {
   max-width: 60px;
 }
 
@@ -65,6 +70,9 @@ input{
   background-color: #77777799;
   color: #ffffff;
   border: 0px;
+  margin-top: 60px;
+  padding: 25px;
+  text-align: center
 }
 
 .inputSuperficie {
@@ -106,22 +114,26 @@ input{
   div #mobile {
     visibility: visible;
   }
-  div #mobile h1{
-      font-size: 45px;
-      color: #c2c1c1de;
-      text-align: center;
-    }
-    div #mobile p{
-      font-size: 20px;
-      text-align: center;
-      color: #b4b3b3; 
-    }
-  .footerMobile{
-      margin: 0px;
+
+  div #mobile h1 {
+    font-size: 45px;
+    color: #c2c1c1de;
+    text-align: center;
   }
-  .titulo{
-      font-size: 35px;
-      color: #888888;
+
+  div #mobile p {
+    font-size: 20px;
+    text-align: center;
+    color: #b4b3b3;
+  }
+
+  .footerMobile {
+    margin: 0px;
+  }
+
+  .titulo {
+    font-size: 35px;
+    color: #888888;
 
   }
 }
@@ -130,15 +142,18 @@ input{
   div #escritorio {
     visibility: visible;
   }
-  div #footer{
-      /* padding-top: 30px; */
+
+  div #footer {
+    /* padding-top: 30px; */
   }
-  .titulo{
-      font-size: 50px;
-      color: #888888;
+
+  .titulo {
+    font-size: 50px;
+    color: #888888;
 
   }
 }
+
 /* 
 @media all and (max-width: 375px) and (max-height:700px) {
   div#mobile {
