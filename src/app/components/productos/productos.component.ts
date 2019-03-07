@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductosService, Producto } from '../../servicios/productos.service' ;
+import { ProductosService, Producto } from '../../servicios/productos.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -38,7 +38,6 @@ export class ProductosComponent implements OnInit {
     this.dintelActivo = false;
     this.herramientaActivo = false;
     this.todosActivo = false;
-    console.log('bloque activo', this.bloqueActivo);
   }
 
   activarBloqueU() {
@@ -68,5 +67,31 @@ export class ProductosComponent implements OnInit {
     this.dintelActivo = false;
     this.herramientaActivo = false;
     this.todosActivo = true;
+  }
+  changeFunc() {
+    let selectBox = (<HTMLInputElement>document.getElementById('selectBox')).value;
+    switch (selectBox) {
+      case 'todos': {
+        this.activarTodos();
+        break;
+      }
+      case 'bloques': {
+        this.activarBloque();
+        break;
+      }
+      case 'dinteles': {
+        this.activarDintel();
+        break;
+      }
+      case 'bloquesU': {
+        this.activarBloqueU();
+        break;
+      }
+      case 'herramientas': {
+        this.activarHerramienta();
+        break;
+      }
+
+    }
   }
 }
