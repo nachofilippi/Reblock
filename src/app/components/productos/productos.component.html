@@ -10,14 +10,14 @@
     <!-- mobile -->
     <div class="btn-block margenSelect" id="mobile">
       <select class="btn btn-dark btn-group-sm btn-block botonMobile-verde" id="selectBox" (change)="changeFunc(value)">
-        <option type="button" class="btn btn-dark btn-sm btn-block" value="todos" >Todos</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="todos">Todos</option>
         <option type="button" class="btn btn-dark btn-sm btn-block" value="bloques" selected>Bloques</option>
-        <option type="button" class="btn btn-dark btn-sm btn-block" value="dinteles" >Dinteles</option>
-        <option type="button" class="btn btn-dark btn-sm btn-block" value="bloquesU" >Bloques 'U'</option>
-        <option type="button" class="btn btn-dark btn-sm btn-block" value="herramientas" >Herramientas</option>       
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="dinteles">Dinteles</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="bloquesU">Bloques 'U'</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="herramientas">Herramientas</option>
       </select>
     </div>
-    
+
     <!-- escritorio -->
     <div class="col-sm-6" id="escritorio">
       <div class="btn-group" style="margin-top:20px; margin-right:10%;float: right;" role="group" aria-label="Basic example">
@@ -37,7 +37,10 @@
         <div *ngIf="producto.Tipo == 'Bloque'">
           <button (click)="verProducto(i)" type="button" class="noBackground">
             <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="card-title text-center texto-gris titulo">
+              <h4>{{ producto.Nombre }}</h4>
+              <h5>{{ producto.Ancho }}</h5>
+            </div>
             <div class="imagenBoton"></div>
           </button>
         </div>
@@ -46,7 +49,10 @@
         <div *ngIf="producto.Tipo == 'BloqueU'">
           <button (click)="verProducto(i)" type="button" class="noBackground">
             <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="card-title text-center texto-gris titulo">
+              <h4>{{ producto.Nombre }}</h4>
+              <h5>{{ producto.Ancho }}</h5>
+            </div>
             <div class="imagenBoton"></div>
           </button>
         </div>
@@ -55,16 +61,22 @@
         <div *ngIf="producto.Tipo == 'Dintel'">
           <button (click)="verProducto(i)" type="button" class="noBackground">
             <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="card-title text-center texto-gris titulo">
+              <h4>{{ producto.Nombre }}</h4>
+              <h5>{{ producto.Ancho }}</h5>
+            </div>
             <div class="imagenBoton"></div>
           </button>
         </div>
       </div>
       <div *ngIf="herramientaActivo">
-        <div *ngIf="producto.Tipo == 'Herramienta'" >
+        <div *ngIf="producto.Tipo == 'Herramienta'">
           <button (click)="verProducto(i)" type="button" class="noBackground">
             <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="card-title text-center texto-gris titulo" style="padding-top:7%">
+              <h4>{{ producto.Nombre }}</h4>
+
+            </div>
             <div class="imagenBoton"></div>
           </button>
         </div>
@@ -72,7 +84,10 @@
       <div *ngIf="todosActivo">
         <button (click)="verProducto(i)" type="button" class="noBackground">
           <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-          <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+          <div class="card-title text-center texto-gris titulo">
+            <h4>{{ producto.Nombre }}</h4>
+            <h5>{{ producto.Ancho }}</h5>
+          </div>
           <div class="imagenBoton"></div>
         </button>
       </div>

@@ -1,27 +1,42 @@
-<div >
-    <h1 class="animated fadeIn fast">{{producto.Nombre | uppercase}}
-        <small>Subtitulo del producto</small>
-    </h1>
-    <hr>
-    <div class="row animated fadeIn">
-        <div class="col-md-4">
-            <img [src]="producto.Img" class="img-fluid" alt="producto.Nombre">
-            <br>
-            <br>
-            <a [routerLink]="['index/productos']" class="btn btn-outline-secondary">Regresar</a>
-        </div>
-        <div class="col-md-8 fadeIn">
-            <h3>{{producto.Nombre}}</h3>
-            <hr>
-            <p>
-                Descripcion del producto
-                <!-- <br> {{producto.Fecha | date:'y'}} -->
+<div class="margenes wrapper carta">
 
-            </p>
-            <div>
-                <p *ngIf="producto.Altura=='Altura: 20cm'"> Ladrillo</p>
-                <p *ngIf="producto.Altura=='Altura: 25cm'"> Dintel</p>
-            </div>
-        </div>
+    <!-- titulo -->
+    <div class="centrado">
+      <h1 class="animated fadeIn fast titulo">{{producto.Nombre | uppercase}}
+        <small>{{producto.Ancho}}</small>
+      </h1>
     </div>
+
+    <!-- carta descriptiva -->
+    <div class="row animated fadeIn centrado">
+      <div class="hijo">
+        <img [src]="producto.Img" class="img-fluid" alt="producto.Nombre">
+      </div>
+      <div class="card hijo descripcion fadeIn" style="max-width: 18rem;">
+        <div class="card-header">
+          <h2>DETALLE GENERAL</h2>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">
+            {{producto.Descripcion}}
+          </h3>
+          <h4 class="card-text"> {{producto.Altura}}</h4>
+          <h4 class="card-text"> {{producto.Longitud}}</h4>
+          <h4 class="card-text"> {{producto.Ancho}}</h4>
+
+        </div>
+      </div>
+
+      <!-- <div>
+      <p *ngIf="producto.Tipo=='Dintel'">Dintel</p>
+      <p *ngIf="producto.Tipo=='Bloque'">Ladrillo</p>
+      <p *ngIf="producto.Tipo=='BloqueU'">Ladrillo en U</p>
+      <p *ngIf="producto.Tipo=='Herramienta'">Herramienta</p> -->
+
+    </div>
+    <!-- boton -->
+    <div class="centrado">
+      <button type="button" [routerLink]="['index/productos']" class="btn btn-secondary boton-verde">REGRESAR</button>
+    </div>
+
 </div>

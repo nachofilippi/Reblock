@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
-import { m } from '@angular/core/src/render3';
 
 @Injectable()
 export class ProductosService {
 
   private productos: Producto[] = [
     {
-      Nombre: 'BLOQUE MACIZO 7.5CM',
+      Nombre: 'BLOQUE MACIZO',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 60cm',
-      Ancho: 'Ancho: 10cm',
+      Ancho: 'Ancho: 7.5cm',
       Img: 'assets/img/bloque7.png',
       Descripcion: 'Ladrillo de concreto celular liviano',
       Tipo: 'Bloque'
     },
     {
-      Nombre: 'BLOQUE MACIZO 10CM',
+      Nombre: 'BLOQUE MACIZO',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 60cm',
       Ancho: 'Ancho: 10cm',
@@ -24,7 +23,7 @@ export class ProductosService {
       Tipo: 'Bloque'
     },
     {
-      Nombre: 'BLOQUE MACIZO 15CM',
+      Nombre: 'BLOQUE MACIZO',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 60cm',
       Ancho: 'Ancho: 15cm',
@@ -33,7 +32,7 @@ export class ProductosService {
       Tipo: 'Bloque'
     },
     {
-      Nombre: 'BLOQUE MACIZO 20CM',
+      Nombre: 'BLOQUE MACIZO',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 60cm',
       Ancho: 'Ancho: 20cm',
@@ -42,7 +41,7 @@ export class ProductosService {
       Tipo: 'Bloque'
     },
     {
-      Nombre: 'DINTEL 10CM ',
+      Nombre: 'DINTEL ',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 150cm/200cm',
       Ancho: 'Ancho: 10cm',
@@ -51,25 +50,25 @@ export class ProductosService {
       Tipo: 'Dintel'
     },
     {
-      Nombre: 'DINTEL 15CM ',
+      Nombre: 'DINTEL ',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 150cm/200cm/250cm',
-      Ancho: 'Ancho: 10cm',
+      Ancho: 'Ancho: 15cm',
       Img: 'assets/img/dintel15.png',
       Descripcion: 'Ladrillo de concreto celular liviano',
       Tipo: 'Dintel'
     },
     {
-      Nombre: 'DINTEL 20CM ',
+      Nombre: 'DINTEL ',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 150cm/200cm/250cm',
-      Ancho: 'Ancho: 10cm',
+      Ancho: 'Ancho: 20cm',
       Img: 'assets/img/dintel20.png',
       Descripcion: 'Ladrillo de concreto celular liviano',
       Tipo: 'Dintel'
     },
     {
-      Nombre: 'BLOQUE \'U\' 15CM ',
+      Nombre: 'BLOQUE \'U\' ',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 60cm',
       Ancho: 'Ancho: 15cm',
@@ -78,7 +77,7 @@ export class ProductosService {
       Tipo: 'BloqueU'
     },
     {
-      Nombre: 'BLOQUE \'U\' 20CM ',
+      Nombre: 'BLOQUE \'U\' ',
       Altura: 'Altura: 25cm',
       Longitud: 'Longitud: 60cm',
       Ancho: 'Ancho: 20cm',
@@ -144,7 +143,7 @@ export class ProductosService {
 
 
   constructor() {
-    console.log('Servicio listo!!');
+    // console.log('Servicio listo!!');
   }
 
   getProductos(): Producto[] {
