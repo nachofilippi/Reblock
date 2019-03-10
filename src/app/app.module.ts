@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
-
 // Routes
 import { APP_ROUTING } from './app.routes';
 
@@ -26,6 +25,7 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FooterComponent } from './components/share/footer/footer.component';
 import { IndexComponent } from './components/index/index.component';
 import { CovidoComponent } from './components/covido/covido.component';
+import { RefAsesoramientoComponent } from './components/ref-asesoramiento/ref-asesoramiento.component';
 
 
 
@@ -44,7 +44,8 @@ import { CovidoComponent } from './components/covido/covido.component';
     BuscadorComponent,
     FooterComponent,
     IndexComponent,
-    CovidoComponent
+    CovidoComponent,
+    RefAsesoramientoComponent
   ],
   imports: [
     BrowserModule,
