@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ref-asesoramiento',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RefAsesoramientoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  btnClick = function () {
+    this.router.navigateByUrl('asesoramiento');
+  };
 }
