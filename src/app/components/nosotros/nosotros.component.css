@@ -12,20 +12,20 @@
   margin: auto auto;
 }
 
-.fondoCard {
-  background-color: #11111111;
-}
-
 .texto-medio {
-  font-size: 16px;
+  font-size: 21px;
 }
 
 .texto-peque {
-  font-size: 14px;
+  font-size: 19px;
+  color: #cccccc;
+}
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(108, 138, 114, 0.74);
 }
 
 .texto-grande {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .texto-verde {
@@ -33,7 +33,7 @@
 }
 
 .fondoGris {
-  background-color: #77777799;
+  background-color: #575757c9;
 }
 
 .texto-gris {

@@ -1,259 +1,648 @@
-<div class="container margen-superior">
+<div class="container margen-superior" style="">
   <h1 class="brand fadeIn fast titulo">
     <span style="color: #90bd42">ASESORAMIENTO</span>
   </h1>
-  <h2 class="animated fadeIn texto-gris" style="font-size: 20px">Calculadora de materiales</h2>
+  <h2 class="animated fadeIn texto-gris" style="font-size: 20px;margin-bottom: 30px">Calculadora de materiales</h2>
 
   <!-- Mobile mostrar -->
-
-  <div class="alert alert-secondary animated bounceInLeft inputApertura" style="margin-top: 60px; padding: 25px; text-align: center"
-    role="alert" id="mobile">
-    La calculadora de materiales no se encuentra disponible para celulares.<br>
-    <b>Disculpe las molestias!</b>
+  <div id="mobile">
+    <div class="alert alert-secondary animated bounceInLeft inputApertura" role="alert">
+      La calculadora de materiales no se encuentra disponible para dispositivos móviles.<br>
+      <b>Disculpe las molestias!</b>
+    </div>
   </div>
-
-
   <!-- Calculadora Escritorio -->
+  <div id="escritorio">
+    <!------------------------------------------------------
+       TABLA DE INPUTS
+    -------------------------------------------------- -->
+    <table class="table table-dark table-hover wrapper" style="text-align: center">
+      <thead>
+        <tr>
+          <th scope="col" colspan="4">PARED</th>
+          <th scope="col" colspan="2">ABERTURA 1</th>
+          <th scope="col" colspan="2">ABERTURA 2</th>
+          <th scope="col" colspan="2">ABERTURA 3</th>
+          <th scope="col" colspan="2">ABERTURA 4</th>
+          <th scope="col">SUPERFICIE</th>
+        </tr>
+        <tr>
+          <th scope="col">Tipo de pared</th>
+          <th scope="col">Espesor (cm)</th>
+          <th scope="col">Largo (m)</th>
+          <th scope="col">Alto (m)</th>
 
-  <div class="wrapper animated bounceInLeft fondo mobileNoMostrar" id="escritorio">
-    <!-- <div class="">
-      <tr>
-        <td class="titulo-mayor" colspan="4" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 1&quot;]">PARED</td>
-        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 1&quot;]">ABERTURA 1</td>
-        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 2&quot;]">ABERTURA 2</td>
-        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 3&quot;]">ABERTURA 3</td>
-        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 4&quot;]">ABERTURA 4</td>
-        <td class="titulo-mayor" colspan="2" rowspan="1" data-sheets-value="[null,2,&quot;ABERTURA 5&quot;]">ABERTURA 5</td>
-        <td class="titulo-mayor" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;SUP.&quot;]">SUPERFICIE</td>
-      </tr>
-      <tr>
-        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Tipo de muro&quot;]">Tipo de pared</td>
-        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Espesor&quot;]">Espesor</td>
-        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Largo&quot;]">Largo</td>
-        <td class="titulo" colspan="1" rowspan="1" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Ancho&quot;]">Ancho</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;Alto&quot;]">Alto</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;&quot;]"></td>
-      </tr>
-      <tr class="unidades">
+          <th scope="col">Ancho (m)</th>
+          <th scope="col">Alto (m)</th>
 
-        <td class="titulo"></td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;cm.&quot;]">cm.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
 
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m.&quot;]">m.</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m2.&quot;]">m²</td>
-        <td class="titulo" data-sheets-value="[null,2,&quot;m2.&quot;]">m²</td>
+          <th scope="col">Ancho (m)</th>
+          <th scope="col">Alto (m)</th>
 
-      </tr>
-    </div> -->
+          <th scope="col">Ancho (m)</th>
+          <th scope="col">Alto (m)</th>
 
-    <!-- introduccion de datos -->
-    <div class="">
-      <div class="card-header textoTitulo">
-        <p> TIPO DE PARED </p>
-        <p> ESPESOR </p>
-        <div style="margin-left: 30px">
-          <p> ABERTURA 1</p>
-          <p> ABERTURA 2</p>
-          <p> ABERTURA 3</p>
-          <p> ABERTURA 4</p>
-          <p> ABERTURA 5</p>
-          <p style="text-align: right"> SUP.</p>
-        </div>
+          <th scope="col">Ancho (m)</th>
+          <th scope="col">Alto (m)</th>
 
-      </div>
+          <th scope="col">M²</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- primera pared -->
+        <tr>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionMuro1">
+              <option value="P">Portante</option>
+              <option value="NP">No Portante</option>
+            </select>
+          </th>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionEspesor1">
+              <option id="espesor7.5_P1" value="7.5">7.5</option>
+              <option id="espesor10_P1" value="10">10</option>
+              <option id="espesor15_P1" value="15">15</option>
+              <option id="espesor20_P1" value="20">20</option>
+            </select>
+          </th>
+          <!-- muro -->
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="largo_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm"><input id="ancho_P1" value="0" min="0" oninput="validity.valid||(value='');"
+                type="number" class="form-control text-white bg-dark" aria-label="Small" ccaria-describedby="inputGroup-sizing-sm"
+                style="border:none"></div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A1_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A1_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A2_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A2_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A3_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A3_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A4_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A4_P1" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm ">
+              <input type="text" id="areatotalp1" [value]="areatotalp1" name="result" value="" class="form-control text-white bg-dark"
+                aria-label="Small" ccaria-describedby="inputGroup-sizing-sm" style="border:none" disabled="disabled" />
+            </div>
+          </td>
+        </tr>
+        <!-- segunda pared -->
+        <tr>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionMuro2">
+              <option value="P">Portante</option>
+              <option value="NP">No Portante</option>
+            </select>
+          </th>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionEspesor2">
+              <option id="espesor7.5_P2" value="7.5">7.5</option>
+              <option id="espesor10_P2" value="10">10</option>
+              <option id="espesor15_P2" value="15">15</option>
+              <option id="espesor20_P2" value="20">20</option>
+            </select>
+          </th>
+          <!-- muro -->
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="largo_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm"><input id="ancho_P2" value="0" min="0" oninput="validity.valid||(value='');"
+                type="number" class="form-control text-white bg-dark" aria-label="Small" caria-describedby="inputGroup-sizing-sm"
+                style="border:none"></div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A1_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A1_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A2_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A2_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A3_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A3_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A4_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A4_P2" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm ">
+              <input type="text" id="areatotalp2" [value]="areatotalp2" name="result" value="" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none" disabled="disabled" />
+            </div>
+          </td>
+        </tr>
+        <!-- tercer pared -->
+        <tr>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionMuro3">
+              <option value="P">Portante</option>
+              <option value="NP">No Portante</option>
+            </select>
+          </th>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionEspesor3">
+              <option id="espesor7.5_P3" value="7.5">7.5</option>
+              <option id="espesor10_P3" value="10">10</option>
+              <option id="espesor15_P3" value="15">15</option>
+              <option id="espesor20_P3" value="20">20</option>
+            </select>
+          </th>
+          <!-- muro -->
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="largo_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm"><input id="ancho_P3" value="0" min="0" oninput="validity.valid||(value='');"
+                type="number" class="form-control text-white bg-dark" aria-label="Small" caria-describedby="inputGroup-sizing-sm"
+                style="border:none"></div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A1_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A1_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A2_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A2_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A3_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A3_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A4_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A4_P3" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm ">
+              <input type="text" id="areatotalp3" [value]="areatotalp3" name="result" value="" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none" disabled="disabled" />
+            </div>
+          </td>
+        </tr>
+        <!-- cuarta pared -->
+        <tr>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionMuro4">
+              <option value="P">Portante</option>
+              <option value="NP">No Portante</option>
+            </select>
+          </th>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionEspesor4">
+              <option id="espesor7.5_P4" value="7.5">7.5</option>
+              <option id="espesor10_P4" value="10">10</option>
+              <option id="espesor15_P4" value="15">15</option>
+              <option id="espesor20_P4" value="20">20</option>
+            </select>
+          </th>
+          <!-- muro -->
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="largo_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm"><input id="ancho_P4" value="0" min="0" oninput="validity.valid||(value='');"
+                type="number" class="form-control text-white bg-dark" aria-label="Small" caria-describedby="inputGroup-sizing-sm"
+                style="border:none"></div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A1_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A1_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A2_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A2_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A3_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A3_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A4_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A4_P4" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm ">
+              <input type="number" id="areatotalp4" [value]="areatotalp4" name="result" value="" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none" disabled="disabled" />
+            </div>
+          </td>
+        </tr>
+        <!-- quinta pared -->
+        <tr>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionMuro5">
+              <option value="P">Portante</option>
+              <option value="NP">No Portante</option>
+            </select>
+          </th>
+          <th scope="row">
+            <select class="custom-select text-white  bg-dark custom-select-sm" id="SeleccionEspesor5">
+              <option id="espesor7.5_P5" value="7.5">7.5</option>
+              <option id="espesor10_P5" value="10">10</option>
+              <option id="espesor15_P5" value="15">15</option>
+              <option id="espesor20_P5" value="20">20</option>
+            </select>
+          </th>
+          <!-- muro -->
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="largo_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm"><input id="ancho_P5" value="0" min="0" oninput="validity.valid||(value='');"
+                type="number" class="form-control text-white bg-dark" aria-label="Small" caria-describedby="inputGroup-sizing-sm"
+                style="border:none"></div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A1_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A1_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A2_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A2_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A3_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A3_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="ancho_A4_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm">
+              <input id="alto_A4_P5" value="0" min="0" oninput="validity.valid||(value='');" type="number" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none">
+            </div>
+          </td>
+          <td>
+            <div class="input-group input-group-sm ">
+              <input type="text" id="areatotalp5" [value]="areatotalp5" name="result" value="" class="form-control text-white bg-dark"
+                aria-label="Small" caria-describedby="inputGroup-sizing-sm" style="border:none" disabled="disabled" />
+            </div>
+          </td>
+        </tr>
 
-      <div class="input-group input-group-sm">
-        <!-- botones -->
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option value="P">Portante</option>
-            <option value="NP">No Portante</option>
-          </select>
-        </div>
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option id="espesor7.5_P1" value="7.5">7.5 cm</option>
-            <option id="espesor10_P1" value="10">10 cm</option>
-            <option id="espesor15_P1" value="15">15 cm</option>
-            <option id="espesor20_P1" value="20">20 cm</option>
-          </select>
-        </div>
-        <!-- inputs -->
-        <input class="form-control inputApertura" id="largo_P1" value="" type="number" title="Largo de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_P1" type="number" title="Ancho de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_A1_P1" type="number" title="Ancho de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="alto_A1_P1" type="number" title="Alto de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="ancho_A2_P1" type="number" title="Ancho de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="alto_A2_P1" type="number" title="Alto de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="ancho_A3_P1" type="number" title="Ancho de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="alto_A3_P1" type="number" title="Alto de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="ancho_A4_P1" type="number" title="Ancho de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="alto_A4_P1" type="number" title="Alto de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="ancho_A5_P1" type="number" title="Ancho de la Abertura 5 en metros">
-        <input class="form-control inputApertura" id="alto_A5_P1" type="number" title="Alto de la Abertura 5 en metros">
-        <input class="form-control inputSuperficie" type="text" id="areatotalp1" name="result" value="">
-      </div>
-    </div>
-    <div>
-      <div class="input-group input-group-sm">
-        <!-- botones -->
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option value="P">Portante</option>
-            <option value="NP">No Portante</option>
-          </select>
-        </div>
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option id="espesor7.5_P2" value="7.5">7.5 cm</option>
-            <option id="espesor10_P2" value="10">10 cm</option>
-            <option id="espesor15_P2" value="15">15 cm</option>
-            <option id="espesor20_P2" value="20">20 cm</option>
-          </select>
-        </div>
-        <!-- inputs -->
-        <input class="form-control inputApertura" id="largo_P2" value="" type="number" title="Largo de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_P2" type="number" title="Ancho de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_A1_P2" type="number" title="Ancho de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="alto_A1_P2" type="number" title="Alto de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="ancho_A2_P2" type="number" title="Ancho de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="alto_A2_P2" type="number" title="Alto de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="ancho_A3_P2" type="number" title="Ancho de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="alto_A3_P2" type="number" title="Alto de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="ancho_A4_P2" type="number" title="Ancho de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="alto_A4_P2" type="number" title="Alto de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="ancho_A5_P2" type="number" title="Ancho de la Abertura 5 en metros">
-        <input class="form-control inputApertura" id="alto_A5_P2" type="number" title="Alto de la Abertura 5 en metros">
-        <input class="form-control inputSuperficie" type="text" id="areatotalp2" name="result" value="">
-      </div>
-    </div>
+      </tbody>
+    </table>
+    <!------------------------------------------------------
+       TABLA DE RESULTADOS
+    -------------------------------------------------- -->
+    <table class="table table-dark table-hover wrapper" style="text-align: center">
+      <tbody>
+        <tr>
+          <td class="tituloTabla" colspan="2" rowspan="5">
+            <div>LADRILLO <br>PORTANTE</div>
+          </td>
+          <td colspan="2" rowspan="1" data-toggle="tooltip" title="ESPESOR DEL BLOQUE">ESPESOR</td>
+          <td colspan="3" rowspan="1" data-toggle="tooltip" title="CANTIDAD DE BLOQUES NECESARIOS PARA EL AREA">BLOQUES</td>
+          <td colspan="2" rowspan="1" data-toggle="tooltip" title="CANTIDAD DE BLOQUES POR PALLET">BLOQUES/PALLET</td>
+          <td colspan="3" rowspan="1" data-toggle="tooltip" title="CANTIDAD DE PALLETS NECESARIOS PARA EL AREA">PALLETS</td>
+        </tr>
 
-    <div>
-      <div class="input-group input-group-sm">
-        <!-- botones -->
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option value="P">Portante</option>
-            <option value="NP">No Portante</option>
-          </select>
-        </div>
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option id="espesor7.5_P3" value="7.5">7.5 cm</option>
-            <option id="espesor10_P3" value="10">10 cm</option>
-            <option id="espesor15_P3" value="15">15 cm</option>
-            <option id="espesor20_P3" value="20">20 cm</option>
-          </select>
-        </div>
-        <!-- inputs -->
-        <input class="form-control inputApertura" data-toggle="tooltip" data-placement="top" id="largo_P3" value=""
-          type="number" title="Largo de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_P3" type="number" title="Ancho de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_A1_P3" type="number" title="Ancho de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="alto_A1_P3" type="number" title="Alto de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="ancho_A2_P3" type="number" title="Ancho de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="alto_A2_P3" type="number" title="Alto de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="ancho_A3_P3" type="number" title="Ancho de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="alto_A3_P3" type="number" title="Alto de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="ancho_A4_P3" type="number" title="Ancho de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="alto_A4_P3" type="number" title="Alto de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="ancho_A5_P3" type="number" title="Ancho de la Abertura 5 en metros">
-        <input class="form-control inputApertura" id="alto_A5_P3" type="number" title="Alto de la Abertura 5 en metros">
-        <input class="form-control inputSuperficie" type="text" id="areatotalp3" name="result" value="">
-      </div>
-    </div>
+        <tr>
+          <td colspan="2" rowspan="1"><b>7.5</b></td>
+          <td id="7.5" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;
+            border: none;" type="text"
+                [value]="bloquep7" id="bloquep7" value="" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="2" rowspan="1"><b>128</b></td>
+          <td id="macizo_7.5" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;
+          border: none;" type="text"
+                [value]="palletp7" id="palletsp7" name="result" value="" disabled="disabled" />
+            </div>
+          </td>
 
-    <div>
-      <div class="input-group input-group-sm">
-        <!-- botones -->
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option value="P">Portante</option>
-            <option value="NP">No Portante</option>
-          </select>
-        </div>
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option id="espesor7.5_P4" value="7.5">7.5 cm</option>
-            <option id="espesor10_P4" value="10">10 cm</option>
-            <option id="espesor15_P4" value="15">15 cm</option>
-            <option id="espesor20_P4" value="20">20 cm</option>
-          </select>
-        </div>
-        <!-- inputs -->
-        <input class="form-control inputApertura" data-toggle="tooltip" data-placement="top" id="largo_P4" value=""
-          type="number" title="Largo de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_P4" type="number" title="Ancho de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_A1_P4" type="number" title="Ancho de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="alto_A1_P4" type="number" title="Alto de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="ancho_A2_P4" type="number" title="Ancho de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="alto_A2_P4" type="number" title="Alto de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="ancho_A3_P4" type="number" title="Ancho de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="alto_A3_P4" type="number" title="Alto de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="ancho_A4_P4" type="number" title="Ancho de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="alto_A4_P4" type="number" title="Alto de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="ancho_A5_P4" type="number" title="Ancho de la Abertura 5 en metros">
-        <input class="form-control inputApertura" id="alto_A5_P4" type="number" title="Alto de la Abertura 5 en metros">
-        <input class="form-control inputSuperficie" type="text" id="areatotalp4" name="result" value="">
-      </div>
-    </div>
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="1"><b>10</b></td>
+          <td id="10" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%; border: none;" type="text" [value]="bloquep10"
+                id="bloquep10" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="2" rowspan="1"><b>96</b></td>
+          <td id="macizo_10" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletp10" id="palletsp10" name="result" disabled="disabled" />
+            </div>
+          </td>
 
-    <div>
-      <div class="input-group input-group-sm">
-        <!-- botones -->
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option value="P">Portante</option>
-            <option value="NP">No Portante</option>
-          </select>
-        </div>
-        <div class="input-group-prepend">
-          <select class="btn btn-secondary btn-sm dropdown-toggle">
-            <option id="espesor7.5_P5" value="7.5">7.5 cm</option>
-            <option id="espesor10_P5" value="10">10 cm</option>
-            <option id="espesor15_P5" value="15">15 cm</option>
-            <option id="espesor20_P5" value="20">20 cm</option>
-          </select>
-        </div>
-        <!-- inputs -->
-        <input class="form-control inputApertura" id="largo_P5" value="" type="number" title="Largo de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_P5" type="number" title="Ancho de la Pared en metros">
-        <input class="form-control inputApertura" id="ancho_A1_P5" type="number" title="Ancho de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="alto_A1_P5" type="number" title="Alto de la Abertura 1 en metros">
-        <input class="form-control inputApertura" id="ancho_A2_P5" type="number" title="Ancho de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="alto_A2_P5" type="number" title="Alto de la Abertura 2 en metros">
-        <input class="form-control inputApertura" id="ancho_A3_P5" type="number" title="Ancho de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="alto_A3_P5" type="number" title="Alto de la Abertura 3 en metros">
-        <input class="form-control inputApertura" id="ancho_A4_P5" type="number" title="Ancho de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="alto_A4_P5" type="number" title="Alto de la Abertura 4 en metros">
-        <input class="form-control inputApertura" id="ancho_A5_P5" type="number" title="Ancho de la Abertura 5 en metros">
-        <input class="form-control inputApertura" id="alto_A5_P5" type="number" title="Alto de la Abertura 5 en metros">
-        <input class="form-control inputSuperficie" type="text" id="areatotalp5" name="result" value="" />
-      </div>
-    </div>
-    <div class="row " style="text-align:center" >
-      <a onclick="calcularAreas()" class="btn btn-lg" style="background:#90bd42;margin-left: 40%" id="click-me">CALCULAR</a>
-      <!-- <input type="button" class="btn_loadmore btn btn-lg btn-orange" value="CALCULAR" onclick="calcularAreas()"/> -->
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="1"><b>15</b></td>
+          <td id="15" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="bloquep15" id="bloquep15" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="3" rowspan="1"><b>64</b></td>
+          <td id="macizo_15" colspan="2" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletp15" id="palletsp15" name="result" disabled="disabled" />
+            </div>
+          </td>
 
+        </tr>
+
+        <tr>
+          <td colspan="2" rowspan="1"><b>20</b></td>
+          <td id="20" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="bloquep20" id="bloquep20" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="2" rowspan="1"><b>48</b></td>
+          <td id="macizo_20" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletp20" id="palletsp20" name="result" disabled="disabled" />
+            </div>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td class="tituloTabla" colspan="2" rowspan="5">
+            <div>LADRILLO <br> NO PORTANTE</div>
+          </td>
+          <td colspan="2" rowspan="1" data-toggle="tooltip" title="ESPESOR DEL BLOQUE">ESPESOR</td>
+          <td colspan="3" rowspan="1" data-toggle="tooltip" title="CANTIDAD DE BLOQUES PARA EL AREA">BLOQUES</td>
+          <td colspan="2" rowspan="1" data-toggle="tooltip" title="CANTIDAD DE BLOQUES POR PALLET">BLOQUES/PALLET</td>
+          <td colspan="3" rowspan="1" data-toggle="tooltip" title="CANTIDAD DE PALLETS PARA EL AREA">PALLETS</td>
+
+        </tr>
+
+        <tr>
+          <td colspan="2" rowspan="1"><b>7.5</b></td>
+          <td id="7.5" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="bloquenp7" id="bloquenp7" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="2" rowspan="1"><b>128</b></td>
+          <td id="macizo_7.5" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletnp7" id="palletsnp7" name="result" disabled="disabled" />
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="1"><b>10</b></td>
+          <td id="10" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="bloquenp10" id="bloquenp10" name="result" disabled="disabled" />
+            </div>
+
+          </td>
+          <td colspan="2" rowspan="1"><b>96</b></td>
+          <td id="macizo_10" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletnp10" id="palletsnp10" name="result" disabled="disabled" />
+            </div>
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="1"><b>15</b></td>
+          <td id="15" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="bloquenp15" id="bloquenp15" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="2" rowspan="1"><b>64</b></td>
+          <td id="macizo_15" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletnp15" id="palletsnp15" name="result" disabled="disabled" />
+            </div>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td colspan="2" rowspan="1"><b>20</b></td>
+          <td id="20" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="bloquenp20" id="bloquenp20" name="result" disabled="disabled" />
+            </div>
+          </td>
+          <td colspan="2" rowspan="1"><b>48</b></td>
+          <td id="macizo_20" colspan="3" rowspan="1">
+            <div class="input-group input-group-sm">
+              <input class="form-control text-white bg-dark" style="max-width: 100%;             border: none;" type="text"
+                [value]="palletnp20" id="palletsnp20" name="result" disabled="disabled" />
+            </div>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="centrar">
+      <button type="button" class="btn btn-lg btn-outline text-center boton-verde" style="text-align:center" (click)="calcularTotalArea()"
+        role="button">CALCULAR</button>
     </div>
   </div>
+
 </div>

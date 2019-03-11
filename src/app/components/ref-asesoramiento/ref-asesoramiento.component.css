@@ -1,9 +1,4 @@
-#obras{
-    margin-top: 160px;
-    margin-bottom: 0px;
-  }
-  
-  .imagen-centrada {
+.imagen-centrada {
     max-width: 100%;
     margin: auto auto;
   }
@@ -37,7 +32,7 @@
   }
   
   .fondoGris {
-    background-color: #5a5a5ad7;
+    background-color: #353535b7;
   }
   
   .texto-gris {

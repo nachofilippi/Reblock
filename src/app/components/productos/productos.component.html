@@ -1,48 +1,105 @@
 <!DOCTYPE html>
-<div id="productos" class="margenes" style="background-color:#111111;">
-  <h1 class="animated fadeIn fast texto-verde" style="margin-left: 10%">
-    PRODUCTOS
-    <h2 class="animated fadeIn texto-gris" style="font-size: 20px">Ladrillos de Cellular Light Concrete</h2>
-  </h1>
+<div id="productos" class="margenes wrapper" style="background-color:#111111;">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="animated fadeIn fast texto-verde" style="margin-left: 10%">
+        PRODUCTOS
+        <h2 class="animated fadeIn texto-gris" style="font-size: 20px">Ladrillos de Cellular Light Concrete</h2>
+      </h1>
+    </div>
+    <!-- mobile -->
+    <div class="btn-block margenSelect" id="mobile">
+      <select class="btn btn-dark btn-group-sm btn-block botonMobile-verde" id="selectBox" (change)="changeFunc(value)">
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="todos">Todos</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="bloques" selected>Bloques</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="dinteles">Dinteles</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="bloquesU">Bloques 'U'</option>
+        <option type="button" class="btn btn-dark btn-sm btn-block" value="herramientas">Herramientas</option>
+      </select>
+    </div>
 
+    <!-- escritorio -->
+    <div class="col-sm-6" id="escritorio">
+      <div class="btn-group" style="margin-top:20px; margin-right:10%;float: right;" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarTodos()">Todos</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarBloque()">Bloques</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarDintel()">Dinteles</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarBloqueU()">Bloques 'U'</button>
+        <button type="button" class="btn btn-secondary boton-verde" (click)="activarHerramienta()">Herramientas</button>
+      </div>
+    </div>
+  </div>
   <hr>
 
-  <div class="card-columns animated fadeIn" style="margin-left: 10%">
-    <div class="card cajonImagen" style="background-color: #00000011;max-width: 18rem;" *ngFor="let producto of productos; let i = index">
-      <div *ngIf="!this.mostrar">
-        <div *ngIf="i<4">
+  <div class="row animated fadeIn" style="margin-left: 10%">
+    <div class="cajonImagen" style="background-color: #00000011; max-width: 18rem; margin:10px" *ngFor="let producto of productos; let i = index">
+      <div *ngIf="bloqueActivo">
+        <div *ngIf="producto.Tipo == 'Bloque'">
           <button (click)="verProducto(i)" type="button" class="noBackground">
             <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-            <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+            <div class="card-title text-center texto-gris titulo">
+              <h4>{{ producto.Nombre }}</h4>
+              <h5>{{ producto.Ancho }}</h5>
+            </div>
             <div class="imagenBoton"></div>
           </button>
         </div>
       </div>
-      <div *ngIf="this.mostrar">
+      <div *ngIf="bloqueUActivo">
+        <div *ngIf="producto.Tipo == 'BloqueU'">
+          <button (click)="verProducto(i)" type="button" class="noBackground">
+            <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
+            <div class="card-title text-center texto-gris titulo">
+              <h4>{{ producto.Nombre }}</h4>
+              <h5>{{ producto.Ancho }}</h5>
+            </div>
+            <div class="imagenBoton"></div>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="dintelActivo">
+        <div *ngIf="producto.Tipo == 'Dintel'">
+          <button (click)="verProducto(i)" type="button" class="noBackground">
+            <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
+            <div class="card-title text-center texto-gris titulo">
+              <h4>{{ producto.Nombre }}</h4>
+              <h5>{{ producto.Ancho }}</h5>
+            </div>
+            <div class="imagenBoton"></div>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="herramientaActivo">
+        <div *ngIf="producto.Tipo == 'Herramienta'">
+          <button (click)="verProducto(i)" type="button" class="noBackground">
+            <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
+            <div class="card-title text-center texto-gris titulo" style="padding-top:7%">
+              <h4>{{ producto.Nombre }}</h4>
+
+            </div>
+            <div class="imagenBoton"></div>
+          </button>
+        </div>
+      </div>
+      <div *ngIf="todosActivo">
         <button (click)="verProducto(i)" type="button" class="noBackground">
           <img class="card-img-top " type="img" [src]="producto.Img" [alt]="producto.Nombre" (click)="verProducto(i)">
-          <h5 class="card-title text-center texto-gris titulo">{{ producto.Nombre }}</h5>
+          <div class="card-title text-center texto-gris titulo">
+            <h4>{{ producto.Nombre }}</h4>
+            <h5>{{ producto.Ancho }}</h5>
+          </div>
           <div class="imagenBoton"></div>
         </button>
       </div>
-
-
       <!-- <div class="texto-gris cajaDescriptiva">
-        
-        <p class="card-text text-center" style="color: #bbbbbb;">
-          {{producto.Altura}} {{producto.Longitud}} {{producto.Ancho}}
-          <br> {{producto.Fecha}}
-        </p>
-      </div> -->
+
+            <p class="card-text text-center" style="color: #bbbbbb;">
+              {{producto.Altura}} {{producto.Longitud}} {{producto.Ancho}}
+              <br> {{producto.Fecha}}
+            </p>
+        </div> -->
       <!-- <a [routerLink]="['/producto',i]" class="btn btn-outline-secondary btn-block">Ver mas...</a> -->
     </div>
   </div>
-  <div class="centrar" *ngIf="!this.mostrar">
-    <button type="button" class="btn btn-lg btn-outline text-center boton-verde" style="text-align:center" (click)="cambio()">VER
-      MAS</button>
-  </div>
-  <div class="centrar" *ngIf="this.mostrar">
-    <button type="button" class="btn btn-lg btn-outline text-center boton-verde" style="text-align:center" (click)="cambio()">VER
-      MENOS</button>
-  </div>
+
 </div>

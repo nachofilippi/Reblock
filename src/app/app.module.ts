@@ -1,16 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
-//Routes
+// Routes
 import { APP_ROUTING } from './app.routes';
 
 
-//Servicios
-import { ProductosService } from "./servicios/productos.service";
+// Servicios
+import { ProductosService } from './servicios/productos.service';
 
 
-//Components
+// Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,6 +25,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { FooterComponent } from './components/share/footer/footer.component';
 import { IndexComponent } from './components/index/index.component';
 import { CovidoComponent } from './components/covido/covido.component';
+import { RefAsesoramientoComponent } from './components/ref-asesoramiento/ref-asesoramiento.component';
+
 
 
 
@@ -41,10 +44,12 @@ import { CovidoComponent } from './components/covido/covido.component';
     BuscadorComponent,
     FooterComponent,
     IndexComponent,
-    CovidoComponent
+    CovidoComponent,
+    RefAsesoramientoComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     APP_ROUTING
 
   ],
