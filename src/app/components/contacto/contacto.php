@@ -20,7 +20,7 @@ $smtpUsuario = "correo@reblock.com.ar";  // Mi cuenta de correo
 $smtpClave = "Rebloques2018";  // Mi contraseña
 
 // Email donde se enviaran los datos cargados en el formulario de contacto
-$emailDestino = "covidogestion@gmail.com";
+$emailDestino = "nachofilippi@gmail.com";
 
 $mail = new PHPMailer();
 $mail->IsSMTP();

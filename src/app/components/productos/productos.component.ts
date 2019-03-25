@@ -16,6 +16,7 @@ export class ProductosComponent implements OnInit {
   herramientaActivo: boolean = false;
   todosActivo: boolean = false;
   mostrar = false;
+  value: any;
 
   constructor(private _productosService: ProductosService,
     private router: Router
@@ -68,7 +69,7 @@ export class ProductosComponent implements OnInit {
     this.herramientaActivo = false;
     this.todosActivo = true;
   }
-  changeFunc() {
+  changeFunc(value) {
     let selectBox = (<HTMLInputElement>document.getElementById('selectBox')).value;
     switch (selectBox) {
       case 'todos': {
