@@ -5,8 +5,14 @@
   <app-productos></app-productos>
 </div> -->
 
-<div class="">
-  <router-outlet></router-outlet>
-</div>
+<!-- loading -->
+<ngx-spinner bdOpacity=0.6 bdColor="rgba(163,163,163,0.79)" size="medium" color="#90bd42" type="square-jelly-box"
+  fullScreen="true">
+  <p style="color: rgb(230, 5, 5)"> Cargando... </p>
+</ngx-spinner>
 
+<!-- componentes -->
+<router-outlet></router-outlet>
+
+<!-- footer -->
 <app-footer></app-footer>
