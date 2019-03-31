@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+// loading
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 // Routes
@@ -29,7 +33,6 @@ import { RefAsesoramientoComponent } from './components/ref-asesoramiento/ref-as
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +53,8 @@ import { RefAsesoramientoComponent } from './components/ref-asesoramiento/ref-as
   imports: [
     BrowserModule,
     FormsModule,
+    NgxSpinnerModule,
+    HttpClientModule,
     APP_ROUTING
 
   ],
