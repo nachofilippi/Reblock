@@ -32,6 +32,17 @@ ul li {
   font-size: 20px;
 }
 
+/* validacion */
+input.ng-touched:invalid {
+  border: 2px solid #dd4f2bd2 !important;
+  background-color: none !important;
+}
+
+input:valid {
+  border: 2px solid #90bd42d2 !important;
+  background-color: none !important;
+}
+
 .brand {
   text-align: center;
 }

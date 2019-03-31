@@ -12,29 +12,59 @@
           <li><i class="fa fa-envelope"></i> reblock@gmail.com.ar</li>
         </ul>
         <div class="col-md-12 text-center">
-          <iframe class="templatemo-contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.706217573267!2d-58.50766268453921!3d-34.484976280490535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1ada6a748f9%3A0x850b718c3e74220a!2sCuyo+90%2C+B1641+Acassuso%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1513692619246"
+          <iframe class="templatemo-contact-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.706217573267!2d-58.50766268453921!3d-34.484976280490535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1ada6a748f9%3A0x850b718c3e74220a!2sCuyo+90%2C+B1641+Acassuso%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1513692619246"
             frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
       <div class="contact">
 
-        <form method="post" role="form" action="contacto.php">
+
+        <form #f="ngForm" (ngSubmit)="contactForm(f)" novalidate>
           <p>
-            <!-- <label>Nombre</label> -->
-            <input style="padding: 5px;" type="text" placeholder="Nombre" name="name" required>
+            <input name="name" ngModel required #first="ngModel" placeholder="Nombre" pattern="^[a-zA-Z][a-zA-Z]{1,25}$"
+              #nameref="ngModel">
           </p>
           <p>
-            <!-- <label>Dirección Email</label> -->
-            <input style="padding: 5px;" type="email" placeholder="Dirección Email" name="email" required>
+            <input name="email" ngModel required placeholder="Dirección Email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailref="ngModel">
           </p>
-          <p class="full">
+          <p>
+            <input name="phone" ngModel required placeholder="Teléfono" pattern="^(0|[1-9][0-9]*){8,12}$" #telref="ngModel">
+          </p>
+          <div class="full">
+            <div *ngIf="emailref.errors && (emailref.touched || emailref.dirty)" class="alert alert-danger">
+              <div [hidden]="!emailref.invalid">
+                Esta ingresando un email invalido
+              </div>
+            </div>
+          </div>
+          <div class="full">
+            <div *ngIf="nameref.errors && (nameref.touched || nameref.dirty)" class="alert alert-danger">
+              <div [hidden]="!nameref.invalid">
+                Esta ingresando un nombre invalido
+              </div>
+            </div>
+          </div>
+          <div class="full">
+            <div *ngIf="telref.errors && (telref.touched || telref.dirty)" class="alert alert-danger">
+              <div [hidden]="!telref.invalid">
+                Esta ingresando un telefono invalido
+              </div>
+            </div>
+          </div>
+          <div class="full">
             <label>Contactenos completando los datos a continuación y le responderemos a la brevedad</label>
-            <textarea name="message" rows="3" required></textarea>
-          </p>
+            <textarea name="message" rows="3" required ngModel></textarea>
+          </div>
           <p class="full">
-            <button class="btn-outline-success" type="submit" name="submit" data-submit="...Enviar">Enviar</button>
+            <button class="btn-outline-success">Enviar</button>
+            <ngx-spinner bdOpacity=0.6 bdColor="rgba(40,40,40,0.9)" size="large" color="#90bd42" type="square-jelly-box"
+              fullScreen="true">
+            </ngx-spinner>
           </p>
         </form>
+
       </div>
     </div>
   </div>

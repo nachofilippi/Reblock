@@ -8,7 +8,7 @@ html {
 }
 
 
-body{
+body {
   padding-bottom: 50px;
   background-image: url("assets/img/fondoLadrillos.jpg");
   /* background-repeat: no-repeat; */
@@ -16,11 +16,55 @@ body{
   font-family: 'Poiret One', cursive;
   /* margin: 0; */
   margin-bottom: 60px;
-} 
+}
 
-.main-container{
+.main-container {
   margin-top: 20px;
 }
+
+/* ---------------------------------- */
+/* SWEET ALERT */
+/* ---------------------------------- */
+
+.swal-modal {
+  /* background-color: rgba(63, 63, 63, 0.788); */
+  background-color: white;
+  border: 3px solid rgba(109, 109, 109, 0.692);
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+.swal-text {
+  display: block;
+  margin: 22px;
+  text-align: center;
+  font-size: 23px;
+  color: #61534e;
+}
+
+.swal-button {
+
+  border-width: 0px 0px 2px 0px;
+  border-color: #90bd42;
+  background-color: rgba(0, 0, 0, 0);
+  color: #bbbbbb;
+
+}
+
+.swal-button:hover {
+
+  background-color: #b6dd74 !important;
+  color: black;
+
+}
+
+/* */
+/* ---------------------------------- */
+/* FIN SWEET ALERT */
+/* ---------------------------------- */
+
 
 .texto-gris {
   color: #bbbbbb;
