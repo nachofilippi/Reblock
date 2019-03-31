@@ -30,35 +30,38 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" #emailref="ngModel">
           </p>
           <p>
-            <input name="phone" ngModel required placeholder="Teléfono" pattern="^(0|[1-9][0-9]*){8,12}$" #telref="ngModel">
+            <input name="phone" ngModel required placeholder="Teléfono" minlength="8" maxlength="12"
+              pattern="(11|15|4)[0-9]*" #telref="ngModel">
           </p>
           <div class="full">
-            <div *ngIf="emailref.errors && (emailref.touched || emailref.dirty)" class="alert alert-danger">
-              <div [hidden]="!emailref.invalid">
-                Esta ingresando un email invalido
+            <div
+              *ngIf="(emailref.errors && (emailref.touched || emailref.dirty)) || (nameref.errors && (nameref.touched || nameref.dirty)) || (telref.errors && (telref.touched || telref.dirty))"
+              class="alert alert-danger">
+              <div *ngIf="emailref.invalid && emailref.touched" [hidden]="!emailref.invalid">
+                Está ingresando un email inválido
               </div>
-            </div>
-          </div>
-          <div class="full">
-            <div *ngIf="nameref.errors && (nameref.touched || nameref.dirty)" class="alert alert-danger">
-              <div [hidden]="!nameref.invalid">
-                Esta ingresando un nombre invalido
+              <div *ngIf="nameref.invalid && nameref.touched" [hidden]="!nameref.invalid">
+                Está ingresando un nombre inválido
               </div>
-            </div>
-          </div>
-          <div class="full">
-            <div *ngIf="telref.errors && (telref.touched || telref.dirty)" class="alert alert-danger">
-              <div [hidden]="!telref.invalid">
-                Esta ingresando un telefono invalido
+              <div *ngIf="telref.invalid && telref.touched" [hidden]="!telref.invalid">
+                Está ingresando un telefono inválido
               </div>
             </div>
           </div>
           <div class="full">
             <label>Contactenos completando los datos a continuación y le responderemos a la brevedad</label>
-            <textarea name="message" rows="3" required ngModel></textarea>
+            <textarea name="message" rows="3" required ngModel minlength="1" #mesref="ngModel"></textarea>
+          </div>
+          <div class="full">
+            <div *ngIf="mesref.errors && (mesref.touched || mesref.dirty)" class="alert alert-danger bloqueado">
+              <div [hidden]="!mesref.invalid">
+                Debe ingresar un mensaje
+              </div>
+            </div>
           </div>
           <p class="full">
-            <button class="btn-outline-success">Enviar</button>
+            <button class="btn-outline-success disabled" *ngIf="mesref.invalid || telref.invalid || nameref.invalid || emailref.invalid" disabled>Enviar</button>
+            <button class="btn-outline-success" *ngIf="!mesref.invalid && !telref.invalid && !nameref.invalid && !emailref.invalid">Enviar</button>
             <ngx-spinner bdOpacity=0.6 bdColor="rgba(40,40,40,0.9)" size="large" color="#90bd42" type="square-jelly-box"
               fullScreen="true">
             </ngx-spinner>
